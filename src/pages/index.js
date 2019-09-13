@@ -3,7 +3,6 @@ import { v4 } from 'uuid';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/Layout';
-import SubscriptionForm from '../components/SubscriptionForm';
 
 import RocketImage from '../img/first-screen/rocket.svg';
 import LuggageImage from '../img/first-screen/luggage.svg';
@@ -12,7 +11,6 @@ const IndexPage = () => (
   <Layout>
     <FirstScreenSection />
     <TopicsSection />
-    <ComingSoonSection />
   </Layout>
 );
 
@@ -88,28 +86,6 @@ const TopicsSection = () => (
       </div>
     </div>
   </div>
-);
-
-const ComingSoonSection = () => (
-  <section className="coming-soon-section">
-    <div className="coming-soon-section__wrapper">
-      <div className="container">
-        <ScrollAnimation animateIn="fadeInUp">
-          <div className="row">
-            <div className="col-12">
-              <h4 className="section-title">Coming Soon!</h4>
-              <p className="section-description">
-                Cras facilisis lacus congue libero viverra, in eleifend quam accumsan. Nunc eu
-                consectetur magna.
-              </p>
-
-              <SubscriptionForm />
-            </div>
-          </div>
-        </ScrollAnimation>
-      </div>
-    </div>
-  </section>
 );
 
 export default IndexPage;
