@@ -9,12 +9,14 @@ import IconCross from '../img/cross-icon.svg';
 const NavMenu = () => (
   <nav>
     <li>
-      <Link to="/" activeClassName="active">
+      <a href="http://" target="_blank" rel="noopener noreferrer">
         Nomod
-      </Link>
+      </a>
     </li>
     <li>
-      <a href="/">Handbook</a>
+      <Link to="/" activeClassName="active">
+        Handbook
+      </Link>
     </li>
     <li>
       <a href="http://" target="_blank" rel="noopener noreferrer">

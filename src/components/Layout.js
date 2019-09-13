@@ -54,7 +54,7 @@ const TemplateWrapper = ({ isAdditionalPage, children }) => {
       </Helmet>
 
       <Header isAdditionalPage={isAdditionalPage} />
-      <div>{children}</div>
+      <div className="main-layout">{children}</div>
       <Footer />
     </div>
   );

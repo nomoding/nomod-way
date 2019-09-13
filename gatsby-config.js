@@ -2,7 +2,7 @@ var proxy = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
-    title: 'Nomod',
+    title: 'Nomod Handbook',
     description: 'Nomod is banking for modern businesses. '
   },
   plugins: [

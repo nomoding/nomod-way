@@ -20,6 +20,148 @@ a {
 
 body {
   font-family: 'Gordita', sans-serif;
+  overflow-x: hidden;
+}
+
+.main-layout {
+  overflow-x: hidden;
+}
+
+// FIRST SCREEN SECTION
+.first-screen {
+  &__wrapper {
+    background-color: $blue;
+    padding-top: 145px;
+  }
+
+  &__skew {
+    background-color: $blue;
+    clip-path: polygon(0 0%, 0 0, 100% 0, 100% 100%);
+    height: 35px;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__text {
+    h1,
+    h3 {
+      color: $white;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 42px;
+      letter-spacing: -1.13px;
+      line-height: 66px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+      letter-spacing: -0.09px;
+      line-height: 28px;
+      margin-bottom: 45px;
+    }
+
+    .search-form {
+      position: relative;
+      top: 30px;
+    }
+  }
+
+  &__wrapper__images {
+    position: relative;
+  }
+
+  &__images {
+    display: flex;
+    position: absolute;
+
+    img {
+      filter: drop-shadow(0 9px 40px #00000026);
+      height: 100%;
+      width: 100%;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+// TOPICS SECTION
+.topics-section {
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  &__title {
+    color: $dark-text;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.7px;
+    line-height: 66px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    margin-bottom: 50px;
+
+    &__image {
+      border-radius: 50%;
+      background-color: #e8ffd5;
+      height: 64px;
+      width: 64px;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      color: $dark-text;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: -0.59px;
+      line-height: 46px;
+    }
+
+    &__description {
+      color: $gray-text;
+      font-size: 17px;
+      letter-spacing: -0.09px;
+      line-height: 28px;
+    }
+  }
+}
+
+// COMMING SOON SECTION
+.coming-soon-section {
+  background-color: #f4f7fa;
+  padding: 10px 0;
+
+  &__wrapper {
+    margin: 100px auto;
+    max-width: 565px;
+    text-align: center;
+  }
+
+  .section-description {
+    margin-bottom: 45px;
+  }
+
+  .subscription-form {
+    margin: auto;
+
+    .input-and-btn {
+      box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+      button {
+        background-color: $blue;
+      }
+    }
+
+    .success-message {
+      color: #017d06;
+    }
+  }
 }
 
 @import 'media';

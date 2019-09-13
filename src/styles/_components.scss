@@ -137,6 +137,7 @@
 
 // FOOTER COMPONENT
 .footer {
+  background-color: #f4f7fa;
   padding: 35px 0;
 
   &__menu {
@@ -231,4 +232,22 @@
   font-size: 20px;
   letter-spacing: -0.1px;
   line-height: 28px;
+}
+
+// Seacrh Form
+.search-form {
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+
+  input {
+    border: 0;
+    outline: 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    color: #8e90ab;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    line-height: 20px;
+    padding: 20px 20px 20px 55px;
+    width: 100%;
+  }
 }

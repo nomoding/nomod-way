@@ -12,51 +12,31 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1366px) {
-  .features-section {
-    &__cards {
-      .row {
-        div:nth-child(2) {
-          bottom: 35px;
-        }
-        div:nth-child(5) {
-          bottom: 35px;
-        }
-      }
-    }
-  }
 }
 
 // Large devices (desktops, less than 1366px)
 @media (max-width: 1365.98px) {
+  // FIRST SCREEN SECTION
   .first-screen {
-    overflow-x: hidden;
-
     &__text {
       h1 {
-        font-size: 55px;
-        letter-spacing: -1.35px;
-        line-height: 59px;
+        font-size: 35px;
+        letter-spacing: -0.94px;
+        line-height: 55px;
       }
 
       h3 {
-        font-size: 18px;
-        letter-spacing: -0.09px;
+        font-size: 16px;
+        letter-spacing: -0.08px;
+        line-height: 28px;
       }
     }
   }
 
-  .features-section {
-    &__cards {
-      &__bg {
-        top: 10%;
-        height: 760px;
-      }
-
-      .row {
-        div:nth-child(even) {
-          bottom: 35px;
-        }
-      }
+  // TOPICS SECTION
+  .topics-section {
+    .card {
+      max-width: 350px;
     }
   }
 }
@@ -87,30 +67,24 @@
 
   // FIRST SCREEN SECTION
   .first-screen {
-    overflow-x: initial;
-
     &__wrapper {
-      padding-top: 175px;
+      padding-top: 145px;
     }
 
     &__text {
       h1 {
-        font-size: 40px;
-        letter-spacing: -1.08px;
-        line-height: 57px;
         text-align: center;
+        margin-bottom: 5px;
       }
 
       h3 {
-        font-size: 16px;
-        letter-spacing: -0.08px;
         line-height: 28px;
         text-align: center;
-        max-width: 485px;
+        max-width: 475px;
         margin: auto;
       }
 
-      .subscription-form {
+      .search-form {
         max-width: 455px;
         margin: 0 auto;
       }
@@ -125,48 +99,32 @@
       position: relative;
       top: 55px;
       margin-bottom: -35px;
+
+      img {
+        width: 90%;
+        &:first-child {
+          margin-right: 15px;
+        }
+      }
     }
   }
 
-  // FEATURES SECTION
-  .features-section {
-    margin-top: 165px;
-
-    &__cards__bg {
-      height: 653px;
-    }
+  // TOPICS SECTION
+  .topics-section {
+    margin-top: 90px;
 
     .card {
-      padding: 35px 30px;
-
-      &__image {
-        height: 54px;
-        width: 54px;
-        margin-bottom: 28px;
-      }
-
       &__title {
-        font-size: 15px;
-        letter-spacing: -0.07px;
-        line-height: 23px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.49px;
+        line-height: 40px;
       }
 
       &__description {
-        font-size: 13px;
+        font-size: 15px;
         letter-spacing: -0.07px;
-        line-height: 23px;
-      }
-    }
-  }
-
-  // ADDITIONALS PAGES
-  .additional-page {
-    &__menu {
-      margin-top: 36px;
-      border-top: 1px solid #d9d9df;
-
-      nav {
-        padding-top: 45px;
+        line-height: 28px;
       }
     }
   }
@@ -218,72 +176,50 @@
   // FIRST SCREEN SECTION
   .first-screen {
     &__wrapper {
-      padding-top: 150px;
+      padding-top: 125px;
     }
 
     &__text {
       h1 {
         font-size: 27px;
         letter-spacing: -0.73px;
-        line-height: 38px;
-        padding-bottom: 40px;
+        line-height: 32px;
+        padding-bottom: 20px;
       }
 
       h3 {
         line-height: 23px;
+        margin: auto;
+        width: 90%;
       }
-    }
-
-    &__wrapper__images {
-      width: 100%;
     }
 
     &__images {
-      top: 30px;
-      width: 100%;
-
-      &__top {
-        justify-content: flex-end;
-      }
-
-      &__bottom {
-        margin-top: 15px;
-      }
-
-      &__top,
-      &__bottom {
-        width: 100%;
-
-        img {
-          width: 55%;
-
-          &:first-child {
-            margin-right: 15px;
-          }
-          &:nth-child(2n) {
-            width: 40%;
-          }
-        }
+      img {
+        width: 48%;
       }
     }
   }
 
-  // FEATURES SECTION
-  .features-section {
-    &__cards__bg {
-      top: 5%;
-      height: 1380px;
+  // TOPICS SECTION
+  .topics-section {
+    margin-top: 60px;
+
+    &__title {
+      font-size: 20px;
+      letter-spacing: -0.54px;
+      margin-bottom: 40px;
     }
 
-    .section-title {
-      margin: auto;
-      margin-bottom: 22px;
-      max-width: 300px;
-    }
-
-    .row {
-      div:nth-child(even) {
-        bottom: 0;
+    .card {
+      &__title {
+        font-size: 15px;
+        letter-spacing: -0.41px;
+      }
+      &__description {
+        font-size: 13px;
+        letter-spacing: -0.07px;
+        line-height: 23px;
       }
     }
   }
