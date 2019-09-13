@@ -31,27 +31,15 @@
     padding: 22px 0;
     transition: all 0.5s;
 
-    nav a {
-      color: $blue;
+    nav {
+      a {
+        color: #9ca1b0;
 
-      &.active {
-        color: $dark-text;
-        border-bottom: 2px solid $dark-text;
+        &.active {
+          color: $blue;
+          border-bottom: 2px solid $blue;
+        }
       }
-    }
-
-    .header-nav--mobile__btn {
-      g {
-        stroke: $blue;
-      }
-    }
-  }
-
-  &--additional {
-    background-color: $white;
-
-    nav a {
-      color: #9ca1b0;
     }
 
     .header-nav--mobile__btn {
@@ -147,7 +135,7 @@
   nav {
     a,
     span {
-      color: $gray-text;
+      color: #8e90ab;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: -0.32px;
@@ -190,6 +178,12 @@
       &:focus {
         outline: 0;
       }
+
+      // &:invalid:not(:focus):not(:placeholder-shown),
+      &.error {
+        color: #c60c0c;
+        background-color: #ffece7;
+      }
     }
 
     button {
@@ -210,6 +204,12 @@
 
   .success-message {
     color: #77ff67;
+    font-size: 13px;
+    letter-spacing: -0.07px;
+    line-height: 28px;
+  }
+  .error-message {
+    color: #ff9662;
     font-size: 13px;
     letter-spacing: -0.07px;
     line-height: 28px;
