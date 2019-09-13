@@ -1,0 +1,35 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/gordita/Gordita-Regular.eot') format('eot'),
+    url('./fonts/gordita/Gordita-Regular.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gordita/Gordita-Regular.woff') format('woff'),
+    url('./fonts/gordita/Gordita-Regular.woff2') format('woff2'),
+    url('./fonts/gordita/Gordita-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/gordita/Gordita-Medium.eot') format('eot'),
+    url('./fonts/gordita/Gordita-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gordita/Gordita-Medium.woff') format('woff'),
+    url('./fonts/gordita/Gordita-Medium.woff2') format('woff2'),
+    url('./fonts/gordita/Gordita-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Gordita';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/gordita/Gordita-Bold.eot') format('eot'),
+    url('./fonts/gordita/Gordita-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gordita/Gordita-Bold.woff') format('woff'),
+    url('./fonts/gordita/Gordita-Bold.woff2') format('woff2'),
+    url('./fonts/gordita/Gordita-Bold.ttf') format('truetype');
+}

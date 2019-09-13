@@ -1,0 +1,330 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 1024px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1366px) {
+  .features-section {
+    &__cards {
+      .row {
+        div:nth-child(2) {
+          bottom: 35px;
+        }
+        div:nth-child(5) {
+          bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1366px)
+@media (max-width: 1365.98px) {
+  .first-screen {
+    overflow-x: hidden;
+
+    &__text {
+      h1 {
+        font-size: 55px;
+        letter-spacing: -1.35px;
+        line-height: 59px;
+      }
+
+      h3 {
+        font-size: 18px;
+        letter-spacing: -0.09px;
+      }
+    }
+  }
+
+  .features-section {
+    &__cards {
+      &__bg {
+        top: 10%;
+        height: 760px;
+      }
+
+      .row {
+        div:nth-child(even) {
+          bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 1024)
+@media (max-width: 1023.98px) {
+  // Section Title
+  .section-title {
+    font-size: 32px;
+    letter-spacing: -0.86px;
+  }
+
+  // Section Description
+  .section-description {
+    font-size: 18px;
+    letter-spacing: -0.09px;
+  }
+
+  // HEADER
+  .header {
+    .header-nav--desktop {
+      display: none;
+    }
+    .header-nav--mobile {
+      display: block;
+    }
+  }
+
+  // FIRST SCREEN SECTION
+  .first-screen {
+    overflow-x: initial;
+
+    &__wrapper {
+      padding-top: 175px;
+    }
+
+    &__text {
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1.08px;
+        line-height: 57px;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 16px;
+        letter-spacing: -0.08px;
+        line-height: 28px;
+        text-align: center;
+        max-width: 485px;
+        margin: auto;
+      }
+
+      .subscription-form {
+        max-width: 455px;
+        margin: 0 auto;
+      }
+    }
+
+    &__wrapper__images {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__images {
+      position: relative;
+      top: 55px;
+      margin-bottom: -35px;
+    }
+  }
+
+  // FEATURES SECTION
+  .features-section {
+    margin-top: 165px;
+
+    &__cards__bg {
+      height: 653px;
+    }
+
+    .card {
+      padding: 35px 30px;
+
+      &__image {
+        height: 54px;
+        width: 54px;
+        margin-bottom: 28px;
+      }
+
+      &__title {
+        font-size: 15px;
+        letter-spacing: -0.07px;
+        line-height: 23px;
+      }
+
+      &__description {
+        font-size: 13px;
+        letter-spacing: -0.07px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  // ADDITIONALS PAGES
+  .additional-page {
+    &__menu {
+      margin-top: 36px;
+      border-top: 1px solid #d9d9df;
+
+      nav {
+        padding-top: 45px;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  // Subscription Form
+  .subscription-form {
+    .input-and-btn {
+      flex-direction: column;
+
+      input {
+        border-radius: 8px;
+        text-align: center;
+        max-width: initial;
+        width: 100%;
+      }
+
+      button {
+        border-radius: 8px;
+        margin-top: 15px;
+        max-width: initial;
+        width: 100%;
+      }
+    }
+
+    .success-message {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  // Section Title
+  .section-title {
+    font-size: 24px;
+    letter-spacing: -0.65px;
+    line-height: 33px;
+    margin-bottom: 22px;
+  }
+
+  // Section Description
+  .section-description {
+    font-size: 15px;
+    letter-spacing: -0.07px;
+    line-height: 21px;
+  }
+
+  // FIRST SCREEN SECTION
+  .first-screen {
+    &__wrapper {
+      padding-top: 150px;
+    }
+
+    &__text {
+      h1 {
+        font-size: 27px;
+        letter-spacing: -0.73px;
+        line-height: 38px;
+        padding-bottom: 40px;
+      }
+
+      h3 {
+        line-height: 23px;
+      }
+    }
+
+    &__wrapper__images {
+      width: 100%;
+    }
+
+    &__images {
+      top: 30px;
+      width: 100%;
+
+      &__top {
+        justify-content: flex-end;
+      }
+
+      &__bottom {
+        margin-top: 15px;
+      }
+
+      &__top,
+      &__bottom {
+        width: 100%;
+
+        img {
+          width: 55%;
+
+          &:first-child {
+            margin-right: 15px;
+          }
+          &:nth-child(2n) {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  // FEATURES SECTION
+  .features-section {
+    &__cards__bg {
+      top: 5%;
+      height: 1380px;
+    }
+
+    .section-title {
+      margin: auto;
+      margin-bottom: 22px;
+      max-width: 300px;
+    }
+
+    .row {
+      div:nth-child(even) {
+        bottom: 0;
+      }
+    }
+  }
+
+  // COMING SOON SECTION
+  .coming-soon-section {
+    .subscription-form {
+      box-shadow: none;
+
+      .input-and-btn input {
+        box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  // FOOTER
+  .footer {
+    &__logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__menu {
+      justify-content: center;
+    }
+
+    nav a {
+      margin-right: 19px;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+@media (max-width: 389.98px) {
+  // FEATURES SECTION
+  .features-section {
+    &__cards__bg {
+      height: 1480px;
+    }
+  }
+}
