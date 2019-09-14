@@ -14,7 +14,7 @@ const NavMenu = () => (
       </a>
     </li>
     <li>
-      <Link to="/" activeClassName="active">
+      <Link to="/" className="active">
         Handbook
       </Link>
     </li>

@@ -3,6 +3,7 @@ import { v4 } from 'uuid';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/Layout';
+import SearchForm from '../components/SearchForm';
 
 import RocketImage from '../img/first-screen/rocket.svg';
 import LuggageImage from '../img/first-screen/luggage.svg';
@@ -31,10 +32,7 @@ const FirstScreenSection = () => (
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={250}>
-              <form className="search-form">
-                {/* <img className="search-form__icon" src="" alt=""/> */}
-                <input type="text" placeholder="Search topics" />
-              </form>
+              <SearchForm />
             </ScrollAnimation>
           </div>
 
@@ -55,7 +53,7 @@ const FirstScreenSection = () => (
 
 const Card = ({ index, title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
-    <ScrollAnimation animateIn="fadeIn" delay={300 + index * 50}>
+    <ScrollAnimation animateIn="fadeIn" delay={350 + index * 50}>
       <div className="card">
         <div className="card__image"></div>
         <div className="card__title">{title}</div>
@@ -70,7 +68,7 @@ const TopicsSection = () => (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <ScrollAnimation animateIn="fadeInLeft" delay={350}>
+          <ScrollAnimation animateIn="fadeInLeft" delay={300}>
             <div className="topics-section__title">Search by topic</div>
           </ScrollAnimation>
         </div>

@@ -16,6 +16,22 @@
 
 // Large devices (desktops, less than 1366px)
 @media (max-width: 1365.98px) {
+  // Common Firsr Screen Section
+  .common-first-screen-section {
+    &__text {
+      h1 {
+        font-size: 35px;
+        letter-spacing: -0.94px;
+        line-height: 56px;
+      }
+
+      .search-form {
+        max-width: 455px;
+        top: 35px;
+      }
+    }
+  }
+
   // FIRST SCREEN SECTION
   .first-screen {
     &__text {
@@ -43,6 +59,19 @@
 
 // Medium devices (tablets, less than 1024)
 @media (max-width: 1023.98px) {
+  // Common Firsr Screen Section
+  .common-first-screen-section {
+    &__text {
+      h1 {
+        text-align: center;
+      }
+
+      .search-form {
+        margin: auto;
+      }
+    }
+  }
+
   // Section Title
   .section-title {
     font-size: 32px;

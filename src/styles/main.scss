@@ -35,12 +35,7 @@ body {
   }
 
   &__skew {
-    background-color: $blue;
-    clip-path: polygon(0 0%, 0 0, 100% 0, 100% 100%);
-    height: 35px;
-    width: 100%;
-    position: relative;
-    z-index: -1;
+    @include skewBG();
   }
 
   &__text {
@@ -160,6 +155,36 @@ body {
 
     .success-message {
       color: #017d06;
+    }
+  }
+}
+
+/*
+* Category Page
+*/
+.category-navigation-section {
+  margin-top: 40px;
+
+  nav {
+    margin-bottom: 40px;
+
+    h3 {
+      color: $dark-text;
+      font-size: 19px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      line-height: 50px;
+    }
+
+    li {
+      list-style: none;
+
+      a {
+        color: $blue;
+        font-size: 17px;
+        letter-spacing: -0.09px;
+        line-height: 40px;
+      }
     }
   }
 }
