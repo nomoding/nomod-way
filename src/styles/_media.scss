@@ -32,6 +32,19 @@
     }
   }
 
+  // Content Section
+  .content-section {
+    h2 {
+      font-size: 27px;
+      letter-spacing: -0.73px;
+    }
+
+    p {
+      font-size: 15px;
+      letter-spacing: -0.07px;
+    }
+  }
+
   // FIRST SCREEN SECTION
   .first-screen {
     &__text {
@@ -53,6 +66,26 @@
   .topics-section {
     .card {
       max-width: 350px;
+    }
+  }
+
+  /*
+* Category Page
+*/
+
+  // Category Navigation Section
+  .category-navigation-section {
+    nav {
+      h3 {
+        font-size: 18px;
+        letter-spacing: -0.09px;
+      }
+
+      li a {
+        font-size: 15px;
+        letter-spacing: -0.07px;
+        line-height: 37px;
+      }
     }
   }
 }
@@ -184,6 +217,14 @@
     .success-message {
       margin-top: 20px;
       text-align: center;
+    }
+  }
+
+  // Content Section
+  .content-section {
+    h2 {
+      font-size: 24px;
+      letter-spacing: -0.65px;
     }
   }
 
