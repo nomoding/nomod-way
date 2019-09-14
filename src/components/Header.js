@@ -9,7 +9,7 @@ import IconCross from '../img/cross-icon.svg';
 const NavMenu = () => (
   <nav>
     <li>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
+      <a href="https://nomod-web.netlify.com/" target="_blank" rel="noopener noreferrer">
         Nomod
       </a>
     </li>

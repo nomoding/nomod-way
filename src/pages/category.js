@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import CommonFirstScreenSection from '../components/CommonFirstScreenSection';
@@ -32,41 +33,41 @@ const CategoryNavigation = () => (
           <nav>
             <h3>Internal Meetings</h3>
             <li>
-              <a href="http://">People Operations</a>
+              <Link to="article">People Operations</Link>
             </li>
             <li>
-              <a href="http://">Communication</a>
+              <Link to="article">Communication</Link>
             </li>
             <li>
-              <a href="http://">Live Streaming</a>
+              <Link to="article">Live Streaming</Link>
             </li>
             <li>
-              <a href="http://">Inclusion & Diversity</a>
+              <Link to="article">Inclusion & Diversity</Link>
             </li>
           </nav>
 
           <nav>
             <h3>Leadership</h3>
             <li>
-              <a href="http://">Gender and Sequal-orientation Identity Definitions and FAQ</a>
+              <Link to="article">Gender and Sequal-orientation Identity Definitions and FAQ</Link>
             </li>
             <li>
-              <a href="http://">Unconscious bias</a>
+              <Link to="article">Unconscious bias</Link>
             </li>
             <li>
-              <a href="http://">Ally resources</a>
+              <Link to="article">Ally resources</Link>
             </li>
             <li>
-              <a href="http://">Code of Conduct</a>
+              <Link to="article">Code of Conduct</Link>
             </li>
             <li>
-              <a href="http://">Anti-Harassment Policy</a>
+              <Link to="article">Anti-Harassment Policy</Link>
             </li>
             <li>
-              <a href="http://">Hiring</a>
+              <Link to="article">Hiring</Link>
             </li>
             <li>
-              <a href="http://">Greenhouse</a>
+              <Link to="article">Greenhouse</Link>
             </li>
           </nav>
         </div>

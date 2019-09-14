@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { v4 } from 'uuid';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -53,13 +54,15 @@ const FirstScreenSection = () => (
 
 const Card = ({ index, title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
-    <ScrollAnimation animateIn="fadeIn" delay={350 + index * 50}>
-      <div className="card">
-        <div className="card__image"></div>
-        <div className="card__title">{title}</div>
-        <div className="card__description">{description}</div>
-      </div>
-    </ScrollAnimation>
+    <Link to="category">
+      <ScrollAnimation animateIn="fadeIn" delay={350 + index * 50}>
+        <div className="card">
+          <div className="card__image"></div>
+          <div className="card__title">{title}</div>
+          <div className="card__description">{description}</div>
+        </div>
+      </ScrollAnimation>
+    </Link>
   </div>
 );
 

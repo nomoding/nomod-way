@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Breadcrumbs = () => (
   <section className="breadcrumbs">
@@ -7,10 +8,10 @@ const Breadcrumbs = () => (
         <div className="col-12">
           <nav>
             <li>
-              <a href="http://">Handbook</a>
+              <Link to="/">Handbook</Link>
             </li>
             <li>
-              <a href="http://">Communication & Meetings </a>
+              <Link to="category">Communication & Meetings </Link>
             </li>
             <li>People Operations</li>
           </nav>
