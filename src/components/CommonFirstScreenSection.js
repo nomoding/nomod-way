@@ -1,5 +1,4 @@
 import React from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import SearchForm from './SearchForm';
 
@@ -9,12 +8,9 @@ const CommonFirstScreenSection = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 common-first-screen-section__text">
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce>
-              <h1>Handbook</h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={150}>
-              <SearchForm />
-            </ScrollAnimation>
+            <h1>Handbook</h1>
+
+            <SearchForm />
           </div>
         </div>
       </div>

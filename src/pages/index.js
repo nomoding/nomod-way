@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { v4 } from 'uuid';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import Layout from '../components/Layout';
 import SearchForm from '../components/SearchForm';
@@ -22,28 +21,21 @@ const FirstScreenSection = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-xl-7 col-lg-7 col-md-12 first-screen__text">
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce>
-              <h1>Handbook</h1>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={150}>
-              <h3>
-                A guide on working at Nomod. Vivamus eget dui viverra, gravida risus ut, dictum
-                augue. Proin varius erat eget libero dignissim feugiat. Nam hendrerit, quam.
-              </h3>
-            </ScrollAnimation>
+            <h1>Handbook</h1>
 
-            <ScrollAnimation animateIn="fadeInLeft" animateOnce delay={250}>
-              <SearchForm />
-            </ScrollAnimation>
+            <h3>
+              A guide on working at Nomod. Vivamus eget dui viverra, gravida risus ut, dictum augue.
+              Proin varius erat eget libero dignissim feugiat. Nam hendrerit, quam.
+            </h3>
+
+            <SearchForm />
           </div>
 
           <div className="col-12 col-xl-5 col-lg-5 col-md-12 first-screen__wrapper__images">
-            <ScrollAnimation animateIn="fadeInRight" animateOnce delay={0}>
-              <div className="first-screen__images">
-                <img src={RocketImage} alt="Rocket" />
-                <img src={LuggageImage} alt="Luggage" />
-              </div>
-            </ScrollAnimation>
+            <div className="first-screen__images">
+              <img src={RocketImage} alt="Rocket" />
+              <img src={LuggageImage} alt="Luggage" />
+            </div>
           </div>
         </div>
       </div>
@@ -55,13 +47,11 @@ const FirstScreenSection = () => (
 const Card = ({ index, title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
     <Link to="category">
-      <ScrollAnimation animateIn="fadeIn" delay={350 + index * 50}>
-        <div className="card">
-          <div className="card__image"></div>
-          <div className="card__title">{title}</div>
-          <div className="card__description">{description}</div>
-        </div>
-      </ScrollAnimation>
+      <div className="card">
+        <div className="card__image"></div>
+        <div className="card__title">{title}</div>
+        <div className="card__description">{description}</div>
+      </div>
     </Link>
   </div>
 );
@@ -71,9 +61,7 @@ const TopicsSection = () => (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <ScrollAnimation animateIn="fadeInLeft" delay={300}>
-            <div className="topics-section__title">Search by topic</div>
-          </ScrollAnimation>
+          <div className="topics-section__title">Search by topic</div>
         </div>
 
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((card, index) => (
