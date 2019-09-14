@@ -320,6 +320,36 @@
       margin-right: 19px;
     }
   }
+
+  /*
+  * Search Page
+  */
+  .search-page {
+    &__title {
+      font-size: 16px;
+      letter-spacing: -0.43px;
+    }
+
+    &__results {
+      li {
+        a {
+          h3 {
+            font-size: 16px;
+            letter-spacing: -0.08px;
+          }
+        }
+      }
+    }
+
+    &__pagination {
+      nav {
+        max-width: 250px;
+        a:nth-child(5) {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
