@@ -58,10 +58,12 @@ const TemplateWrapper = ({ isAdditionalPage, children }) => {
 
       <Header isAdditionalPage={isAdditionalPage} />
       <div className="main-layout">
-        {children}
-        <CommingSoonSection />
+        <div>{children}</div>
+        <div>
+          <CommingSoonSection />
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };
