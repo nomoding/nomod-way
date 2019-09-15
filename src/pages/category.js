@@ -1,19 +1,22 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import CommonFirstScreenSection from '../components/CommonFirstScreenSection';
 import Breadcrumbs from '../components/Breadcrumbs';
 import ContentSection from '../components/ContentSection';
 
-const CategoryPage = () => (
-  <Layout>
-    <CommonFirstScreenSection />
-    <Breadcrumbs />
-    <ContentSectionWrapper />
-    <CategoryNavigation />
-  </Layout>
-);
+const CategoryPage = ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <CommonFirstScreenSection />
+      <Breadcrumbs />
+      <ContentSectionWrapper />
+      <CategoryNavigation />
+    </Layout>
+  );
+};
 
 const ContentSectionWrapper = () => (
   <ContentSection>
@@ -77,3 +80,43 @@ const CategoryNavigation = () => (
 );
 
 export default CategoryPage;
+
+export const pageQuery = graphql`
+  query CategoryPage {
+    getSubCategories: allMarkdownRemark(
+      filter: {
+        frontmatter: { templateKey: { eq: "subcategory-post" }, articleCategory: { eq: "Culture" } }
+      }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+
+    getArticles: allMarkdownRemark(
+      filter: {
+        frontmatter: { templateKey: { eq: "article-post" }, articleCategory: { eq: "Culture" } }
+      }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            articleSubCategory
+            articleCategory
+          }
+        }
+      }
+    }
+  }
+`;

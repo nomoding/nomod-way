@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { v4 } from 'uuid';
 
 import Layout from '../components/Layout';
@@ -8,10 +8,10 @@ import SearchForm from '../components/SearchForm';
 import RocketImage from '../img/first-screen/rocket.svg';
 import LuggageImage from '../img/first-screen/luggage.svg';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <FirstScreenSection />
-    <TopicsSection />
+    <TopicsSection categories={data.getAllCategories.edges} />
   </Layout>
 );
 
@@ -44,7 +44,7 @@ const FirstScreenSection = () => (
   </section>
 );
 
-const Card = ({ index, title, description }) => (
+const Card = ({ title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
     <Link to="category">
       <div className="card">
@@ -56,7 +56,7 @@ const Card = ({ index, title, description }) => (
   </div>
 );
 
-const TopicsSection = () => (
+const TopicsSection = ({ categories }) => (
   <div className="topics-section">
     <div className="container">
       <div className="row">
@@ -64,12 +64,11 @@ const TopicsSection = () => (
           <div className="topics-section__title">Search by topic</div>
         </div>
 
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((card, index) => (
+        {categories.map(({ node }) => (
           <Card
             key={v4()}
-            index={index}
-            title="Welcome"
-            description="Cras facilisis lacus congue libero viverra, in eleifend quam accumsan. Nunc eu consectetur magna."
+            title={node.frontmatter.title}
+            description={node.frontmatter.description}
           />
         ))}
       </div>
@@ -78,3 +77,23 @@ const TopicsSection = () => (
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query MainPage {
+    getAllCategories: allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "category-post" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`;

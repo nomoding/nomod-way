@@ -29,7 +29,6 @@ collections:
           widget: 'hidden',
           default: 'subcategory-post',
         }
-
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
           label: 'Category',
