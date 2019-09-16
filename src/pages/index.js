@@ -44,9 +44,9 @@ const FirstScreenSection = () => (
   </section>
 );
 
-const Card = ({ title, description }) => (
+const Card = ({ url, title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
-    <Link to="category">
+    <Link to={url}>
       <div className="card">
         <div className="card__image"></div>
         <div className="card__title">{title}</div>
@@ -67,6 +67,7 @@ const TopicsSection = ({ categories }) => (
         {categories.map(({ node }) => (
           <Card
             key={v4()}
+            url={node.fields.slug}
             title={node.frontmatter.title}
             description={node.frontmatter.description}
           />
