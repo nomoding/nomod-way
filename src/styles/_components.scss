@@ -9,6 +9,12 @@
   nav {
     list-style: none;
 
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
     a {
       color: #b3c3ff;
       font-size: 13px;
@@ -55,7 +61,10 @@
     align-items: center;
 
     nav {
-      display: flex;
+      ul {
+        display: flex;
+      }
+
       li {
         margin-right: 37px;
 

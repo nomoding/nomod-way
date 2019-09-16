@@ -8,31 +8,33 @@ import IconCross from '../img/cross-icon.svg';
 
 const NavMenu = () => (
   <nav>
-    <li>
-      <a href="https://nomod-web.netlify.com/" target="_blank" rel="noopener noreferrer">
-        Nomod
-      </a>
-    </li>
-    <li>
-      <Link to="/" className="active">
-        Handbook
-      </Link>
-    </li>
-    <li>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-        Careers
-      </a>
-    </li>
-    <li>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-        Community
-      </a>
-    </li>
-    <li>
-      <a href="http://" target="_blank" rel="noopener noreferrer">
-        Blog
-      </a>
-    </li>
+    <ul>
+      <li>
+        <a href="https://nomod-web.netlify.com/" target="_blank" rel="noopener noreferrer">
+          Nomod
+        </a>
+      </li>
+      <li>
+        <Link to="/" className="active">
+          Handbook
+        </Link>
+      </li>
+      <li>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          Careers
+        </a>
+      </li>
+      <li>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          Community
+        </a>
+      </li>
+      <li>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          Blog
+        </a>
+      </li>
+    </ul>
   </nav>
 );
 

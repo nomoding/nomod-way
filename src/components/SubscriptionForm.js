@@ -54,6 +54,7 @@ class SubscriptionForm extends Component {
             value={inputValue}
             onChange={this.handleChangeInput}
             onInvalid={e => this.handleInvalidInput(e)}
+            aria-label="Subscription Email"
           />
           <button type="submit">JOIN WAITLIST</button>
         </div>
