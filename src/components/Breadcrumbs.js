@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const Breadcrumbs = () => (
+const Breadcrumbs = ({ navData }) => (
   <section className="breadcrumbs">
     <div className="container">
       <div className="row">
@@ -11,9 +11,13 @@ const Breadcrumbs = () => (
               <Link to="/">Handbook</Link>
             </li>
             <li>
-              <Link to="category">Communication & Meetings </Link>
+              {navData.category.link ? (
+                <Link to={navData.category.link}>{navData.category.title}</Link>
+              ) : (
+                navData.category.title
+              )}
             </li>
-            <li>People Operations</li>
+            {navData.article ? <li>{navData.article.title}</li> : null}
           </nav>
         </div>
       </div>

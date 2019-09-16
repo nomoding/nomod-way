@@ -8,10 +8,22 @@ import ContentSection from '../components/ContentSection';
 
 const ArticlePage = ({ data }) => {
   const ArticleInfo = data.getArticle;
+  const CategoryInfo = data.getCategory;
+
+  const NavData = {
+    category: {
+      title: CategoryInfo.frontmatter.title,
+      link: CategoryInfo.fields.slug
+    },
+    article: {
+      title: ArticleInfo.frontmatter.title
+    }
+  };
+
   return (
     <Layout>
       <CommonFirstScreenSection />
-      <Breadcrumbs />
+      <Breadcrumbs navData={NavData} />
       <ContentSectionWrapper articleInfo={ArticleInfo} />
     </Layout>
   );
@@ -35,14 +47,22 @@ const ContentSectionWrapper = ({
 export default ArticlePage;
 
 export const pageQuery = graphql`
-  query ArticlePage($id: String!) {
+  query ArticlePage($id: String!, $articleCategory: String!) {
     getArticle: markdownRemark(id: { eq: $id }) {
-      id
       html
       frontmatter {
         title
         articleCategory
         articleSubCategory
+      }
+    }
+
+    getCategory: markdownRemark(frontmatter: { title: { eq: $articleCategory } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
       }
     }
   }

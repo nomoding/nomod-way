@@ -23,10 +23,18 @@ const CategoryPage = ({ data }) => {
   const SubCategories = data.getSubCategories.edges;
   const Articles = data.getArticles.edges;
 
+  const NavData = {
+    category: {
+      title: CategoryInfo.title,
+      link: false
+    },
+    article: false
+  };
+
   return (
     <Layout>
       <CommonFirstScreenSection />
-      <Breadcrumbs />
+      <Breadcrumbs navData={NavData} />
       <ContentSectionWrapper categoryInfo={CategoryInfo} />
       <CategoryNavigation subCategories={SubCategories} articles={Articles} />
     </Layout>

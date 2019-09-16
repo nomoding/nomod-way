@@ -88,7 +88,8 @@ exports.createPages = ({ actions, graphql }) => {
             }`,
             component: path.resolve(ArticlePageTemplate),
             context: {
-              id
+              id,
+              articleCategory
             }
           });
         });
