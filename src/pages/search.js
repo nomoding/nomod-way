@@ -2,6 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { Index } from 'elasticlunr';
 import queryString from 'query-string';
+import kebabCase from 'lodash/kebabCase';
 
 import Layout from '../components/Layout';
 import CommonFirstScreenSection from '../components/CommonFirstScreenSection';
@@ -160,7 +161,11 @@ const ContentSectionWrapper = ({
                 <ul className="search-page__results">
                   {searchResults.slice(offset, limit).map(article => (
                     <li key={article.id}>
-                      <Link to="article">
+                      <Link
+                        to={`${kebabCase(article.articleCategory)}-${kebabCase(
+                          article.articleSubCategory
+                        )}/${article.slug}`}
+                      >
                         <h3>{article.title}</h3>
                         <p>{article.html.slice(0, 245)}...</p>
                       </Link>
