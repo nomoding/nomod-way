@@ -57,7 +57,7 @@ const Card = ({ url, title, description }) => (
 );
 
 const TopicsSection = ({ categories }) => (
-  <div className="topics-section">
+  <div id="categories" className="topics-section">
     <div className="container">
       <div className="row">
         <div className="col-12">

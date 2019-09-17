@@ -38,11 +38,13 @@ class SearchForm extends Component {
         onSubmit={event => {
           event.preventDefault();
 
-          navigate(`/search?query=${query}`, {
-            state: {
-              query
-            }
-          });
+          if (query) {
+            navigate(`/search?query=${query}`, {
+              state: {
+                query
+              }
+            });
+          }
         }}
       >
         {/* <img className="search-form__icon" src="" alt=""/> */}

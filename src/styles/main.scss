@@ -199,6 +199,7 @@ body {
 */
 .search-page {
   margin-top: 20px;
+  min-height: 50vh;
 
   &__wrapper {
     max-width: 780px;
@@ -246,10 +247,12 @@ body {
 
   &__pagination {
     nav {
+      display: flex;
+      justify-content: center;
       margin: 27px auto;
       max-width: 345px;
 
-      a,
+      i,
       span {
         display: inline-block;
         color: $gray-text;
@@ -258,11 +261,13 @@ body {
         line-height: 42px;
       }
 
-      a {
-        padding: 0 18px;
+      span {
+        margin: 0 18px;
+        cursor: pointer;
+        text-align: center;
       }
 
-      a.active {
+      span.active {
         background-color: $blue;
         border-radius: 50%;
         color: #fff;
