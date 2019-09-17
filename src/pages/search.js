@@ -24,34 +24,6 @@ const SearchFormQuery = props => {
 
 const POSTS_PER_PAGE = 5;
 
-const TEST_RESULTS = [
-  { id: 1, title: 'Title 1', html: 'some text' },
-  { id: 2, title: 'Title 2', html: 'some text' },
-  { id: 3, title: 'Title 3', html: 'some text' },
-  { id: 4, title: 'Title 4', html: 'some text' },
-  { id: 5, title: 'Title 5', html: 'some text' },
-  { id: 6, title: 'Title 6', html: 'some text' },
-  { id: 7, title: 'Title 7', html: 'some text' },
-  { id: 8, title: 'Title 8', html: 'some text' },
-  { id: 9, title: 'Title 9', html: 'some text' },
-  { id: 10, title: 'Title 10', html: 'some text' },
-  { id: 11, title: 'Title 11', html: 'some text' },
-  { id: 12, title: 'Title 12', html: 'some text' },
-  { id: 13, title: 'Title 13', html: 'some text' },
-  { id: 14, title: 'Title 14', html: 'some text' },
-  { id: 15, title: 'Title 15', html: 'some text' },
-  { id: 16, title: 'Title 16', html: 'some text' },
-  { id: 17, title: 'Title 17', html: 'some text' },
-  { id: 18, title: 'Title 18', html: 'some text' },
-  { id: 19, title: 'Title 19', html: 'some text' },
-  { id: 20, title: 'Title 20', html: 'some text' },
-  { id: 21, title: 'Title 21', html: 'some text' },
-  { id: 22, title: 'Title 22', html: 'some text' },
-  { id: 23, title: 'Title 23', html: 'some text' },
-  { id: 24, title: 'Title 24', html: 'some text' },
-  { id: 25, title: 'Title 25', html: 'some text' },
-  { id: 26, title: 'Title 26', html: 'some text' }
-];
 class SearchPage extends React.Component {
   state = {
     query: '',
@@ -184,13 +156,6 @@ const ContentSectionWrapper = ({
                         {page.number}
                       </span>
                     ))}
-
-                    {/* <span to="search">2</span>
-                  <span to="search">3</span>
-                  <span to="search">4</span>
-                  <span to="search">5</span>
-                  <i>...</i>
-                  <span to="search">32</span> */}
                   </nav>
                 </div>
               </div>
