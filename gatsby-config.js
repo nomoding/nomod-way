@@ -61,31 +61,32 @@ module.exports = {
       }
     },
     {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `html`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields` values
+          MarkdownRemark: {
+            articleCategory: node => node.frontmatter.articleCategory,
+            articleSubCategory: node => node.frontmatter.articleSubCategory,
+            title: node => node.frontmatter.title,
+            path: node => node.frontmatter.path,
+            html: node => node.internal.content,
+            slug: node => node.fields.slug
+          }
+        },
+        // Optional filter to limit indexed nodes
+        filter: (node, getNode) => node.frontmatter.templateKey === 'article-post'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
-    // {
-    //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-    //   options: {
-    //     develop: true, // Activates purging in npm run develop
-    //     purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
-    //   },
-    // }, // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
-  // for avoiding CORS while developing Netlify Functions locally
-  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
-  // developMiddleware: app => {
-  //   app.use(
-  //     '/.netlify/functions/',
-  //     proxy({
-  //       target: 'http://localhost:9000',
-  //       pathRewrite: {
-  //         '/.netlify/functions/': ''
-  //       }
-  //     })
-  //   );
-  // }
 };

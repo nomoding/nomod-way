@@ -1,17 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { navigate } from 'gatsby';
+import { Location } from '@reach/router';
+import queryString from 'query-string';
 
-const SearchForm = () => (
-  <form
-    className="search-form"
-    onSubmit={event => {
-      event.preventDefault();
-      navigate('/search/');
-    }}
-  >
-    {/* <img className="search-form__icon" src="" alt=""/> */}
-    <input type="text" placeholder="Search topics" />
-  </form>
+const WithLocationSearchForm = props => (
+  <Location>
+    {({ location, navigate }) => (
+      <SearchForm
+        {...props}
+        location={location}
+        navigate={navigate}
+        search={location.search ? queryString.parse(location.search) : {}}
+      />
+    )}
+  </Location>
 );
 
-export default SearchForm;
+class SearchForm extends Component {
+  state = {
+    query: ``
+  };
+
+  componentDidMount() {
+    const { isSearchPage, search } = this.props;
+
+    if (isSearchPage && search) {
+      this.setState({ query: search.query });
+    }
+  }
+
+  render() {
+    const { query } = this.state;
+
+    return (
+      <form
+        className="search-form"
+        onSubmit={event => {
+          event.preventDefault();
+
+          navigate(`/search?query=${query}`, {
+            state: {
+              query
+            }
+          });
+        }}
+      >
+        {/* <img className="search-form__icon" src="" alt=""/> */}
+        <input
+          type="text"
+          placeholder="Search topics"
+          value={query}
+          onChange={e => {
+            this.setState({ query: e.target.value });
+          }}
+        />
+      </form>
+    );
+  }
+}
+
+export default WithLocationSearchForm;

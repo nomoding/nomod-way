@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "developer": "Vadym Necheporenko <ne4eporenko.v@gmail.com>",
   "dependencies": {
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
     "animate.css": "^3.7.2",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.0.23",
@@ -27,6 +28,7 @@
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
+    "query-string": "^6.8.3",
     "react": "^16.8.4",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.4",
