@@ -1,6 +1,7 @@
 ---
 templateKey: article-post
 title: New People Operations
+image: /img/test-image-2.jpg
 articleCategory: Culture
 articleSubCategory: Leadership
 ---
