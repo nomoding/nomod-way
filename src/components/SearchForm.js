@@ -3,6 +3,8 @@ import { navigate } from 'gatsby';
 import { Location } from '@reach/router';
 import queryString from 'query-string';
 
+import SearchIcon from '../img/search-icon.svg';
+
 const WithLocationSearchForm = props => (
   <Location>
     {({ location, navigate }) => (
@@ -29,29 +31,41 @@ class SearchForm extends Component {
     }
   }
 
+  handleSubmit = event => {
+    const { query } = this.state;
+    event.preventDefault();
+
+    if (query) {
+      navigate(`/search?query=${query}`, {
+        state: {
+          query
+        }
+      });
+    }
+  };
+
+  handleKeyUp = event => {
+    if (event.keyCode == 13) {
+      event.target.blur();
+    }
+  };
+
   render() {
     const { query } = this.state;
 
     return (
-      <form
-        className="search-form"
-        onSubmit={event => {
-          event.preventDefault();
-
-          if (query) {
-            navigate(`/search?query=${query}`, {
-              state: {
-                query
-              }
-            });
-          }
-        }}
-      >
-        {/* <img className="search-form__icon" src="" alt=""/> */}
+      <form className="search-form" onSubmit={this.handleSubmit}>
+        <img
+          className="search-form__icon"
+          src={SearchIcon}
+          onClick={this.handleSubmit}
+          alt="search"
+        />
         <input
           type="text"
           placeholder="Search topics"
           value={query}
+          onKeyUp={this.handleKeyUp}
           onChange={e => {
             this.setState({ query: e.target.value });
           }}

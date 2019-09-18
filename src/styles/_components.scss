@@ -247,6 +247,13 @@
 .search-form {
   filter: drop-shadow(0 10px 40px #0000001a);
 
+  &__icon {
+    position: absolute;
+    top: 18px;
+    left: 17px;
+    cursor: pointer;
+  }
+
   input {
     border: 0;
     outline: 0;
