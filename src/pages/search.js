@@ -7,6 +7,8 @@ import kebabCase from 'lodash/kebabCase';
 import Layout from '../components/Layout';
 import CommonFirstScreenSection from '../components/CommonFirstScreenSection';
 
+import PeriscopeImage from '../img/periscope-image.svg';
+
 const SearchFormQuery = props => {
   return (
     <StaticQuery
@@ -162,12 +164,20 @@ const ContentSectionWrapper = ({
                 )}
               </div>
             ) : (
-              <div className="search-page__wrapper">
-                <h2 className="search-page__title">
-                  We were unable to find results for <strong>{searchQuery}</strong>
-                </h2>
+              <div>
+                <div className="search-page__wrapper">
+                  <h2 className="search-page__title">
+                    We were unable to find results for <strong>{searchQuery}</strong>
+                  </h2>
 
-                <Link to="/#categories">Browse our category instead</Link>
+                  <Link to="/#categories">Browse our category instead</Link>
+                </div>
+                <div className="search-page__periscope">
+                  <img
+                    src={PeriscopeImage}
+                    atl={`We were unable to find results for ${searchQuery}`}
+                  />
+                </div>
               </div>
             )}
           </div>

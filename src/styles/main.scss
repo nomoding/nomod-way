@@ -278,6 +278,20 @@ body {
       }
     }
   }
+
+  &__periscope {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 15vh 0 20vh;
+
+    img {
+      width: 30%;
+      max-width: 265px;
+      min-width: 165px;
+    }
+  }
 }
 
 @import 'media';
