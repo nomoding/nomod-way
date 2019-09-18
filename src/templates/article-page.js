@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import CommonFirstScreenSection from '../components/CommonFirstScreenSection';
@@ -32,13 +33,13 @@ const ArticlePage = ({ data }) => {
 const ContentSectionWrapper = ({
   articleInfo: {
     html,
-    frontmatter: { title }
+    frontmatter: { title, image }
   }
 }) => (
   <div className="article-page">
     <ContentSection>
       <h2>{title}</h2>
-
+      <Img fluid={image.childImageSharp.fluid} alt={'test'} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </ContentSection>
   </div>
@@ -54,6 +55,13 @@ export const pageQuery = graphql`
         title
         articleCategory
         articleSubCategory
+        image {
+          childImageSharp {
+            fluid(maxWidth: 790, quality: 100) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
 
