@@ -218,9 +218,8 @@ body {
   }
 
   &__results {
-    border-bottom: 1px solid #babbd0;
     padding-left: 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 
     li {
       margin: 20px 0 15px;
@@ -246,6 +245,9 @@ body {
   }
 
   &__pagination {
+    padding-top: 10px;
+    border-top: 1px solid #babbd0;
+
     nav {
       display: flex;
       justify-content: center;

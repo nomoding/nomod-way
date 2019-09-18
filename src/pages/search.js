@@ -145,19 +145,21 @@ const ContentSectionWrapper = ({
                   ))}
                 </ul>
 
-                <div className="search-page__pagination">
-                  <nav>
-                    {Pages.map(page => (
-                      <span
-                        key={page.number}
-                        className={page.isActive ? 'active' : ''}
-                        onClick={() => handlePagination(page.number)}
-                      >
-                        {page.number}
-                      </span>
-                    ))}
-                  </nav>
-                </div>
+                {Pages.length > 1 && (
+                  <div className="search-page__pagination">
+                    <nav>
+                      {Pages.map(page => (
+                        <span
+                          key={page.number}
+                          className={page.isActive ? 'active' : ''}
+                          onClick={() => handlePagination(page.number)}
+                        >
+                          {page.number}
+                        </span>
+                      ))}
+                    </nav>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="search-page__wrapper">

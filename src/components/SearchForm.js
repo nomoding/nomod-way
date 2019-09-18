@@ -45,9 +45,13 @@ class SearchForm extends Component {
   };
 
   handleKeyUp = event => {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       event.target.blur();
     }
+  };
+
+  handleFocus = event => {
+    event.target.select();
   };
 
   render() {
@@ -66,6 +70,7 @@ class SearchForm extends Component {
           placeholder="Search topics"
           value={query}
           onKeyUp={this.handleKeyUp}
+          onFocus={this.handleFocus}
           onChange={e => {
             this.setState({ query: e.target.value });
           }}
