@@ -177,12 +177,17 @@
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
       background-color: #ffffff;
+      color: #2d3346;
       font-size: 16px;
       letter-spacing: -0.18px;
       line-height: 20px;
       padding: 15px 20px;
       max-width: 360px;
       width: 100%;
+
+      &::placeholder {
+        color: #8e90ab;
+      }
 
       &:focus {
         outline: 0;
