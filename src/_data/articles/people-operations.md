@@ -1,6 +1,7 @@
 ---
 templateKey: article-post
 title: 'People Operations '
+image: /img/test-image.jpg
 articleCategory: Culture
 articleSubCategory: Internal Meetings
 ---
