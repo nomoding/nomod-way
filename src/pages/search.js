@@ -24,7 +24,7 @@ const SearchFormQuery = props => {
   );
 };
 
-const POSTS_PER_PAGE = 5;
+const POSTS_PER_PAGE = 8;
 
 class SearchPage extends React.Component {
   state = {
@@ -111,7 +111,7 @@ const ContentSectionWrapper = ({
   activePage,
   handlePagination
 }) => {
-  const QTY_OF_PAGES = Math.ceil(searchResults.length / 5);
+  const QTY_OF_PAGES = Math.ceil(searchResults.length / POSTS_PER_PAGE);
   let Pages = [];
 
   for (let index = 0; index < QTY_OF_PAGES; index++) {

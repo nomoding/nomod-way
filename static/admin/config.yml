@@ -55,7 +55,7 @@ collections:
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'article-post' }
       - { label: 'Title', name: 'title', widget: 'string', required: true }
-      - { label: 'Test Image', name: 'image', widget: 'image' }
+      - { label: 'Test Image', name: 'image', widget: 'image', required: false }
       - { label: 'Content', name: 'body', widget: 'markdown', required: true }
       - {
           label: 'Category',

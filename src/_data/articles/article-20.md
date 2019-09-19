@@ -1,7 +1,6 @@
 ---
 templateKey: article-post
-title: Article 6
-image: /img/test-image-2.jpg
+title: Article 20
 articleCategory: Culture
 articleSubCategory: Leadership
 ---

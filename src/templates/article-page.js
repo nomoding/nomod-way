@@ -39,7 +39,9 @@ const ContentSectionWrapper = ({
   <div className="article-page">
     <ContentSection>
       <h2>{title}</h2>
-      <Img fluid={image.childImageSharp.fluid} alt="Test image" style={{ marginBottom: 25 }} />
+      {image && (
+        <Img fluid={image.childImageSharp.fluid} alt="Test image" style={{ marginBottom: 25 }} />
+      )}
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </ContentSection>
   </div>

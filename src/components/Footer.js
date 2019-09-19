@@ -15,7 +15,7 @@ const Footer = () => (
 
         <div className="footer__menu col-12 col-lg-10 col-md-10 d-flex align-items-center">
           <nav>
-            <a
+            {/* <a
               href="https://nomod-web.netlify.com/cookies-policy/"
               target="_blank"
               rel="noopener noreferrer"
@@ -35,7 +35,7 @@ const Footer = () => (
               rel="noopener noreferrer"
             >
               Terms of Use
-            </a>
+            </a> */}
 
             <span>© {new Date().getFullYear()} Nomod</span>
           </nav>
