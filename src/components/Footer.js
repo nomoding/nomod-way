@@ -15,9 +15,28 @@ const Footer = () => (
 
         <div className="footer__menu col-12 col-lg-10 col-md-10 d-flex align-items-center">
           <nav>
-            <Link to="cookies-policy">Cookies</Link>
-            <Link to="privacy-policy">Privacy</Link>
-            <Link to="terms-of-use">Terms of Use</Link>
+            <a
+              href="https://nomod-web.netlify.com/cookies-policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cookies
+            </a>
+            <a
+              href="https://nomod-web.netlify.com/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy
+            </a>
+            <a
+              href="https://nomod-web.netlify.com/terms-of-use"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Terms of Use
+            </a>
+
             <span>© {new Date().getFullYear()} Nomod</span>
           </nav>
         </div>
