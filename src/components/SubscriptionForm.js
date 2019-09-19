@@ -50,7 +50,11 @@ class SubscriptionForm extends Component {
     })
       .then(response => {
         if (response.ok) {
-          this.setState({ success: true, inputValue: '' });
+          this.setState({ success: true, inputValue: '' }, () => {
+            setTimeout(() => {
+              this.setState({ success: false });
+            }, 10000);
+          });
         }
       })
       .catch(error => console.log(error));
@@ -64,11 +68,18 @@ class SubscriptionForm extends Component {
         action="/"
         name="nomod-way"
         data-netlify="true"
+        data-netlify-recaptcha="true"
+        netlify-honeypot="bot-field"
         className="subscription-form"
         onSubmit={this.handleSubmitForm}
       >
         <div className="input-and-btn">
           <input type="hidden" name="form-name" value="nomod-way" />
+          <div hidden>
+            <label>
+              Don’t fill this out if you're human: <input name="bot-field" />
+            </label>
+          </div>
           <input
             type="email"
             name="email"
@@ -83,6 +94,8 @@ class SubscriptionForm extends Component {
           />
           <button type="submit">JOIN WAITLIST</button>
         </div>
+
+        <div data-netlify-recaptcha="true"></div>
 
         {success && (
           <div className="success-message">

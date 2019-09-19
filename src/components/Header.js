@@ -88,27 +88,29 @@ class Header extends Component {
               </Link>
             </div>
 
-            <div className="col-10 col-lg-10 col-md-6">
-              <div className="header-nav--desktop">
-                <NavMenu />
-              </div>
+            {false && (
+              <div className="col-10 col-lg-10 col-md-6">
+                <div className="header-nav--desktop">
+                  <NavMenu />
+                </div>
 
-              <div className="header-nav--mobile">
-                <div
-                  className="header-nav--mobile__btn"
-                  onClick={() => this.handleMobileMenu(!showMobileMenu)}
-                >
-                  <IconMenu />
+                <div className="header-nav--mobile">
+                  <div
+                    className="header-nav--mobile__btn"
+                    onClick={() => this.handleMobileMenu(!showMobileMenu)}
+                  >
+                    <IconMenu />
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
         {/*
          *  Mobile Menu
          */}
-        {showMobileMenu && (
+        {false && showMobileMenu && (
           <div className="header-nav--mobile__menu">
             <div className="container">
               <div className="row">
@@ -125,9 +127,6 @@ class Header extends Component {
                 <div className="col-12">
                   <div className="d-inline-flex flex-column">
                     <NavMenu />
-                    <Link to="/#subscription-form" onClick={() => this.handleMobileMenu(false)}>
-                      <button className="btn">JOIN WAITLIST</button>
-                    </Link>
                   </div>
                 </div>
               </div>
