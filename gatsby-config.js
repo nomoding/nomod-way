@@ -3,7 +3,8 @@ var proxy = require('http-proxy-middleware');
 module.exports = {
   siteMetadata: {
     title: 'Nomod Handbook',
-    description: 'Nomod is banking for modern businesses. '
+    description: 'Nomod is banking for modern businesses. ',
+    siteUrl: 'https://nomod-way.netlify.com/' // important for robots-txt and sitemap
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -58,6 +59,21 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Nomod`,
+        short_name: `Nomod`,
+        description: 'Nomod is banking for modern businesses. ',
+        start_url: `/`,
+        background_color: `#244feb`,
+        theme_color: `#244feb`,
+        display: `minimal-ui`,
+        icon: `static/img/favicon-32x32.png` // This path is relative to the root of the site.
       }
     },
     {
