@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+
 class SubscriptionForm extends Component {
   state = {
     error: false,
@@ -34,17 +40,35 @@ class SubscriptionForm extends Component {
 
     this.setState({ error: false });
 
-    setTimeout(() => {
-      console.log('Request');
-      this.setState({ success: true, inputValue: '' });
-    }, 500);
+    fetch('https://nomod-web.netlify.com/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'nomod-way',
+        email: this.state.inputValue
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          this.setState({ success: true, inputValue: '' });
+        }
+      })
+      .catch(error => console.log(error));
   };
 
   render() {
     const { inputValue, error, errorMessage, success } = this.state;
     return (
-      <form className="subscription-form" onSubmit={this.handleSubmitForm}>
+      <form
+        method="POST"
+        action="/"
+        name="nomod-way"
+        data-netlify="true"
+        className="subscription-form"
+        onSubmit={this.handleSubmitForm}
+      >
         <div className="input-and-btn">
+          <input type="hidden" name="form-name" value="nomod-way" />
           <input
             type="email"
             name="email"
@@ -54,7 +78,8 @@ class SubscriptionForm extends Component {
             value={inputValue}
             onChange={this.handleChangeInput}
             onInvalid={e => this.handleInvalidInput(e)}
-            aria-label="Subscription Email"
+            id="subscription-email"
+            aria-label="email"
           />
           <button type="submit">JOIN WAITLIST</button>
         </div>
