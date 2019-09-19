@@ -91,6 +91,7 @@ class SubscriptionForm extends Component {
             onInvalid={e => this.handleInvalidInput(e)}
             id="subscription-email"
             aria-label="email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           />
           <button type="submit">JOIN WAITLIST</button>
         </div>
