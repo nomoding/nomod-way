@@ -40,7 +40,7 @@ class SubscriptionForm extends Component {
 
     this.setState({ error: false });
 
-    fetch('https://nomod-web.netlify.com/', {
+    fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
