@@ -10,6 +10,7 @@ import ContentSection from '../components/ContentSection';
 const ArticlePage = ({ data }) => {
   const ArticleInfo = data.getArticle;
   const CategoryInfo = data.getCategory;
+  const ArticleTitle = ArticleInfo.frontmatter.title;
 
   const NavData = {
     category: {
@@ -22,7 +23,7 @@ const ArticlePage = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <Layout seoTitle={ArticleTitle}>
       <CommonFirstScreenSection />
       <Breadcrumbs navData={NavData} />
       <ContentSectionWrapper articleInfo={ArticleInfo} />

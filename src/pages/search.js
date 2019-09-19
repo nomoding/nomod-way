@@ -88,7 +88,7 @@ class SearchPage extends React.Component {
   render() {
     const { results, query, limit, offset, activePage } = this.state;
     return (
-      <Layout>
+      <Layout seoTitle="Search - Nomod Handbook">
         <CommonFirstScreenSection isSearchPage handleSearchForm={this.search} />
         <ContentSectionWrapper
           limit={limit}

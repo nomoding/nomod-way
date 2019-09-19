@@ -22,6 +22,7 @@ const CategoryPage = ({ data }) => {
   const CategoryInfo = data.getCategoryInfo.frontmatter;
   const SubCategories = data.getSubCategories.edges;
   const Articles = data.getArticles.edges;
+  const CategoryTitle = CategoryInfo.title;
 
   const NavData = {
     category: {
@@ -32,7 +33,7 @@ const CategoryPage = ({ data }) => {
   };
 
   return (
-    <Layout>
+    <Layout seoTitle={CategoryTitle}>
       <CommonFirstScreenSection />
       <Breadcrumbs navData={NavData} />
       <ContentSectionWrapper categoryInfo={CategoryInfo} />
@@ -62,6 +63,7 @@ const CategoryNavigation = ({ subCategories, articles }) => {
 
   // adding article to subcategory
   articles.forEach(article => {
+    const articleDescription = article.node.html;
     const articleLink = article.node.fields.slug;
     const { title: articleTitle, articleCategory, articleSubCategory } = article.node.frontmatter;
     const categorySlug = kebabCase(articleCategory);
@@ -69,7 +71,8 @@ const CategoryNavigation = ({ subCategories, articles }) => {
 
     SubCategoriesWithArticles[subCategorySlug].articles.push({
       articleLink: `${categorySlug}-${subCategorySlug}/${articleLink}`,
-      articleTitle
+      articleTitle,
+      articleDescription
     });
   });
 
@@ -80,17 +83,26 @@ const CategoryNavigation = ({ subCategories, articles }) => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            {SubCategoriesWithArticlesArray.map(item => (
-              <nav key={v4()}>
-                <h3>{item.title}</h3>
+            <div className="category-navigation-section__wrapper">
+              {SubCategoriesWithArticlesArray.map(item => (
+                <nav key={v4()}>
+                  <h3>{item.title}</h3>
 
-                {item.articles.map(article => (
-                  <li key={v4()}>
-                    <Link to={article.articleLink}>{article.articleTitle}</Link>
-                  </li>
-                ))}
-              </nav>
-            ))}
+                  {item.articles.map(article => (
+                    <li key={v4()}>
+                      <Link to={article.articleLink}>
+                        <h4>{article.articleTitle}</h4>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${article.articleDescription.slice(0, 245)}...`
+                          }}
+                        />
+                      </Link>
+                    </li>
+                  ))}
+                </nav>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -142,6 +154,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          html
           frontmatter {
             title
             articleCategory

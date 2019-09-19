@@ -16,13 +16,13 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a');
 }
 
-const TemplateWrapper = ({ isAdditionalPage, children }) => {
+const TemplateWrapper = ({ seoTitle, isAdditionalPage, children }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
+        <title>{seoTitle || title}</title>
         <meta name="description" content={description} />
 
         <link
