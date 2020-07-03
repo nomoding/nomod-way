@@ -1,8 +1,8 @@
 {
-  "name": "nomod",
-  "description": "Nomod",
+  "name": "Nomod Way",
+  "description": "How we work at Nomod",
   "version": "1.0.0",
-  "developer": "Vadym Necheporenko <ne4eporenko.v@gmail.com>",
+  "developer": "Engineering at Nomod",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
     "animate.css": "^3.7.2",
