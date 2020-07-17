@@ -67,7 +67,7 @@ class SearchForm extends Component {
         />
         <input
           type="text"
-          placeholder="Search topics"
+          placeholder="Banking is necessary, banks are not"
           value={query}
           onKeyUp={this.handleKeyUp}
           onFocus={this.handleFocus}

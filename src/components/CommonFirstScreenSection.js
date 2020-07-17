@@ -8,7 +8,7 @@ const CommonFirstScreenSection = ({ isSearchPage }) => (
       <div className="container">
         <div className="row">
           <div className="col-12 common-first-screen-section__text">
-            <h1>Handbook</h1>
+            <h1>Nomod Way</h1>
 
             <SearchForm isSearchPage={isSearchPage} />
           </div>

@@ -8,11 +8,11 @@ const Breadcrumbs = ({ navData }) => (
         <div className="col-12">
           <nav>
             <li>
-              <Link to="/">Handbook</Link>
+              <Link to="/">Way</Link>
             </li>
             <li>
               {navData.category.link ? (
-                <Link to={navData.category.link}>{navData.category.title}</Link>
+                <Link to={`/${navData.category.link}`}>{navData.category.title}</Link>
               ) : (
                 navData.category.title
               )}

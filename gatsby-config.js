@@ -2,9 +2,9 @@ var proxy = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
-    title: 'Nomod Handbook',
-    description: 'Nomod is banking for modern businesses. ',
-    siteUrl: 'https://nomod-way.netlify.com/' // important for robots-txt and sitemap
+    title: 'Nomod Way',
+    description: 'How we work at Nomod',
+    siteUrl: 'https://way.nomod.com' // important for robots-txt and sitemap
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -66,15 +66,34 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Nomod`,
-        short_name: `Nomod`,
-        description: 'Nomod is banking for modern businesses. ',
+        name: `Nomod Way`,
+        short_name: `Nomod Way`,
+        description:
+          'How we work at Nomod',
         start_url: `/`,
         background_color: `#244feb`,
         theme_color: `#244feb`,
         display: `minimal-ui`,
-        icon: `static/img/favicon-32x32.png` // This path is relative to the root of the site.
-      }
+        icon: `static/img/nomod-384x384.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `static/img/nomod-384x384.png`,
+            sizes: `384x384`,
+            type: `image/png`,
+          },
+          {
+            src: `static/img/nomod-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+
+          {
+            src: `static/img/nomod-180x180.png`,
+            sizes: `180x180`,
+            type: `image/png`,
+          },
+        ],
+      },
     },
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
@@ -95,12 +114,6 @@ module.exports = {
         },
         // Optional filter to limit indexed nodes
         filter: (node, getNode) => node.frontmatter.templateKey === 'article-post'
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
       }
     },
     'gatsby-plugin-netlify' // make sure to keep it last in the array

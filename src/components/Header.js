@@ -10,28 +10,13 @@ const NavMenu = () => (
   <nav>
     <ul>
       <li>
-        <a href="https://nomod-web.netlify.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://nomod.com" target="_blank" rel="noopener noreferrer">
           Nomod
         </a>
       </li>
       <li>
-        <Link to="/" className="active">
-          Handbook
-        </Link>
-      </li>
-      <li>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="https://careers.nomod.com" target="_blank" rel="noopener noreferrer">
           Careers
-        </a>
-      </li>
-      <li>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          Community
-        </a>
-      </li>
-      <li>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          Blog
         </a>
       </li>
     </ul>
@@ -81,14 +66,14 @@ class Header extends Component {
             <div className="col-2 col-lg-2 col-md-6">
               <Link to="/">
                 <img
-                  src={fixHeder || isAdditionalPage ? LogoLight : LogoDark}
+                  src={fixHeder || isAdditionalPage ? LogoDark : LogoLight}
                   alt="Nomod"
                   title="Nomod"
                 />
               </Link>
             </div>
 
-            {false && (
+
               <div className="col-10 col-lg-10 col-md-6">
                 <div className="header-nav--desktop">
                   <NavMenu />
@@ -103,20 +88,20 @@ class Header extends Component {
                   </div>
                 </div>
               </div>
-            )}
+
           </div>
         </div>
 
         {/*
          *  Mobile Menu
          */}
-        {false && showMobileMenu && (
+        {showMobileMenu && (
           <div className="header-nav--mobile__menu">
             <div className="container">
               <div className="row">
                 <div className="col-12 d-flex align-items-center justify-content-between">
                   <Link to="/">
-                    <img src={LogoDark} alt="Nomod" title="Nomod" />
+                    <img src={LogoLight} alt="Nomod" title="Nomod" />
                   </Link>
                   <div onClick={() => this.handleMobileMenu(!showMobileMenu)}>
                     <img src={IconCross} alt="close" />

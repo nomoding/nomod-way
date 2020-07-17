@@ -70,7 +70,7 @@ const CategoryNavigation = ({ subCategories, articles }) => {
     const subCategorySlug = kebabCase(articleSubCategory);
 
     SubCategoriesWithArticles[subCategorySlug].articles.push({
-      articleLink: `${categorySlug}-${subCategorySlug}/${articleLink}`,
+      articleLink: `/${categorySlug}-${subCategorySlug}/${articleLink}`,
       articleTitle,
       articleDescription
     });

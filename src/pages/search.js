@@ -88,7 +88,7 @@ class SearchPage extends React.Component {
   render() {
     const { results, query, limit, offset, activePage } = this.state;
     return (
-      <Layout seoTitle="Search - Nomod Handbook">
+      <Layout seoTitle="Search - Nomod Way">
         <CommonFirstScreenSection isSearchPage handleSearchForm={this.search} />
         <ContentSectionWrapper
           limit={limit}
@@ -136,7 +136,7 @@ const ContentSectionWrapper = ({
                   {searchResults.slice(offset, limit).map(article => (
                     <li key={article.id}>
                       <Link
-                        to={`${kebabCase(article.articleCategory)}-${kebabCase(
+                        to={`/${kebabCase(article.articleCategory)}-${kebabCase(
                           article.articleSubCategory
                         )}/${article.slug}`}
                       >
@@ -167,10 +167,10 @@ const ContentSectionWrapper = ({
               <div>
                 <div className="search-page__wrapper">
                   <h2 className="search-page__title">
-                    We were unable to find results for <strong>{searchQuery}</strong>
+                    Apologies, we didn't couldn't find anything that matched <strong>{searchQuery}</strong>
                   </h2>
 
-                  <Link to="/#categories">Browse our category instead</Link>
+                  <Link to="/#categories">Dive into our categories instead</Link>
                 </div>
                 <div className="search-page__periscope">
                   <img

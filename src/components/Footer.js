@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import LogoLight from '../img/logo-light.svg';
+import LogoDark from '../img/logo-dark.svg';
 
 const Footer = () => (
   <div className="footer">
@@ -9,7 +9,7 @@ const Footer = () => (
       <div className="row">
         <div className="footer__logo col-12 col-lg-2 col-md-2">
           <Link to="/">
-            <img src={LogoLight} alt="Nomod" />
+            <img src={LogoDark} alt="Nomod" />
           </Link>
         </div>
 

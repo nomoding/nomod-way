@@ -5,8 +5,8 @@ import { v4 } from 'uuid';
 import Layout from '../components/Layout';
 import SearchForm from '../components/SearchForm';
 
-import RocketImage from '../img/first-screen/rocket.svg';
-import LuggageImage from '../img/first-screen/luggage.svg';
+import PeopleImage from '../img/nomod-people.svg';
+import RocketImage from '../img/nomod-rocket.svg';
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -21,11 +21,10 @@ const FirstScreenSection = () => (
       <div className="container">
         <div className="row">
           <div className="col-12 col-xl-7 col-lg-7 col-md-12 first-screen__text">
-            <h1>Handbook</h1>
+            <h1>Nomod Way</h1>
 
             <h3>
-              A guide on working at Nomod. Vivamus eget dui viverra, gravida risus ut, dictum augue.
-              Proin varius erat eget libero dignissim feugiat. Nam hendrerit, quam.
+              A guide to how we work at Nomod. The Nomod Way aspires to be a detailed, transparent, always working handbook on how we run Nomod, a fully distributed organisation
             </h3>
 
             <SearchForm />
@@ -33,8 +32,8 @@ const FirstScreenSection = () => (
 
           <div className="col-12 col-xl-5 col-lg-5 col-md-12 first-screen__wrapper__images">
             <div className="first-screen__images">
-              <img src={RocketImage} alt="Rocket" />
-              <img src={LuggageImage} alt="Luggage" />
+              <img src={PeopleImage} alt="Nomod People" />
+              <img src={RocketImage} alt="Nomod Rocket" />
             </div>
           </div>
         </div>
@@ -61,7 +60,7 @@ const TopicsSection = ({ categories }) => (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <div className="topics-section__title">Search by topic</div>
+          <div className="topics-section__title">Dive In</div>
         </div>
 
         {categories.map(({ node }) => (
