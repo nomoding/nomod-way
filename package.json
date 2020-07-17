@@ -43,10 +43,10 @@
   "scripts": {
     "clean": "gatsby clean",
     "start:app": "npm run develop",
-    "start:lambda": "netlify-lambda serve src/lambda",
+    "start:lambda": "netlify-lambda serve src/functions",
     "start": "run-p start:**",
     "build:app": "npm run clean && gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda",
+    "build:lambda": "netlify-lambda build src/functions",
     "build": "run-p build:**",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
