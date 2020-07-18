@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import React from 'react';
 import { StaticQuery, graphql, Link, navigate } from 'gatsby';
 import { Index } from 'elasticlunr';

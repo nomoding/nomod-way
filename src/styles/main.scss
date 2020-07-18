@@ -108,12 +108,12 @@ body {
   .card {
     margin-bottom: 50px;
 
-    &__image {
-      border-radius: 50%;
-      background-color: #e8ffd5;
-      height: 64px;
-      width: 64px;
-      margin-bottom: 15px;
+    &__image {  
+      width: 0;
+      height: 0;
+      border-bottom: 16px solid #244feb;
+      border-left: 16px solid transparent;
+      margin-bottom: 5px;
     }
 
     &__title {

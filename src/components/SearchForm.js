@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import React, { Component } from 'react';
 import { navigate } from 'gatsby';
 import { Location } from '@reach/router';

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { v4 } from 'uuid';
 
 import Layout from '../components/Layout';
 import SearchForm from '../components/SearchForm';
