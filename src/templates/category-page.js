@@ -162,6 +162,7 @@ export const pageQuery = graphql`
           articleCategory: { eq: $categoryName }
         }
       }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
