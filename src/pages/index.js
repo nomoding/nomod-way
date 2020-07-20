@@ -1,19 +1,19 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { v4 } from 'uuid';
+import React from "react"
+import { Link, graphql } from "gatsby"
+import { v4 } from "uuid"
 
-import Layout from '../components/Layout';
-import SearchForm from '../components/SearchForm';
+import Layout from "../components/Layout"
+import SearchForm from "../components/SearchForm"
 
-import PeopleImage from '../img/nomod-people.svg';
-import RocketImage from '../img/nomod-rocket.svg';
+import PeopleImage from "../img/nomod-people.svg"
+import RocketImage from "../img/nomod-rocket.svg"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <FirstScreenSection />
     <TopicsSection categories={data.getAllCategories.edges} />
   </Layout>
-);
+)
 
 const FirstScreenSection = () => (
   <section className="first-screen">
@@ -24,7 +24,9 @@ const FirstScreenSection = () => (
             <h1>Nomod Way</h1>
 
             <h3>
-              A guide to how we work at Nomod. The Nomod Way aspires to be a detailed, transparent, always working handbook on how we run Nomod, a fully distributed organisation
+              A guide to how we work at Nomod. The Nomod Way aspires to be a
+              detailed, transparent, always working handbook on how we run
+              Nomod, a fully distributed organisation
             </h3>
 
             <SearchForm />
@@ -41,7 +43,7 @@ const FirstScreenSection = () => (
     </div>
     <div className="first-screen__skew"></div>
   </section>
-);
+)
 
 const Card = ({ url, title, description }) => (
   <div className="col-12 col-xl-4 col-lg-6 col-md-6">
@@ -53,7 +55,7 @@ const Card = ({ url, title, description }) => (
       </div>
     </Link>
   </div>
-);
+)
 
 const TopicsSection = ({ categories }) => (
   <div id="categories" className="topics-section">
@@ -74,14 +76,15 @@ const TopicsSection = ({ categories }) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default IndexPage;
+export default IndexPage
 
 export const pageQuery = graphql`
   query MainPage {
     getAllCategories: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "category-post" } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -96,4 +99,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`
