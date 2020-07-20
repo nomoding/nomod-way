@@ -13,7 +13,7 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/uploads/`,
         name: 'uploads'
       }
     },
@@ -55,7 +55,7 @@ module.exports = {
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
-              destinationDir: '${__dirname}/static/img'
+              destinationDir: '${__dirname}/static/uploads/'
             }
           }
         ]
