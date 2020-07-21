@@ -24,7 +24,7 @@ const TemplateWrapper = ({ seoTitle, isAdditionalPage, children }) => {
         <title>{`${seoTitle || description} | ${title}`}</title>
         <meta name="description" content={description} />
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={`${title} | ${seoTitle}`} />
+        <meta property="og:title" content={`${title} | ${seoTitle || description}`}/>
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.png`} />
       </Helmet>

@@ -86,7 +86,6 @@ module.exports = {
             sizes: `192x192`,
             type: `image/png`,
           },
-
           {
             src: `static/img/nomod-180x180.png`,
             sizes: `180x180`,
