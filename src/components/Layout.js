@@ -26,7 +26,7 @@ const TemplateWrapper = ({ seoTitle, isAdditionalPage, children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={`${title} | ${seoTitle || description}`}/>
         <meta property="og:url" content="/" />
-        <meta property="og:image" content={`${withPrefix('/')}img/og-image.png`} />
+        <meta property="og:image" content="https://way.nomod.com/img/og-image.png" />
       </Helmet>
 
       <Header isAdditionalPage={isAdditionalPage} />
