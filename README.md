@@ -101,7 +101,7 @@ The alternative, easier way to contribute is to [use GitHub's built in editor][5
 
 ## Licensing
 
-Content contained in the Esanjo Way is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](6). All code including the Esanjo Hugo theme is licensed under the [MIT License][7]
+Content contained in the Nomod Way is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](6). All code including the Nomod Hugo theme is licensed under the [MIT License][7]
 
 
 [1]:https://www.gatsbyjs.org
