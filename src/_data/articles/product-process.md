@@ -2,7 +2,7 @@
 templateKey: article-post
 title: How we build Product
 articleCategory: Product
-articleSubCategory: 
+articleSubCategory: How
 order: 1
 ---
 
