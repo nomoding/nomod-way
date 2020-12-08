@@ -18,6 +18,7 @@ We use the following tools for for our mobile engineering workflow:
 - Figma
 - Clubhouse
 - Github
+- Bitrise
 
 All of our UI together with explanatory flows are located in Figma. Figma is organised into Projects, with each project containing a specific large set of features of our product. All mobile projects have an "App - " designation in their name followed by the feature, for example "App - Dashboard" is where you'll find UI for our Dashboard, or "App - Settings" is where you'll find UI for our Settings pane.
 
@@ -28,17 +29,21 @@ We use Github to manage all of our code and to host our code repositories. The r
 - [Nomod App][4]
 - [Nomod for Stripe][5]
 
-### Communication & Standups
-Daily Standups take place in [#eng-collab][6] (a Slack channel dedicated to external collaborators) at 0900 GMT, Monday through Friday. 
+We use [Bitrise][6] as our CI/CD tool of choice to automatically create both development and production builds. Any commits to the `development` branch will result in triggering a workflow to run some basic linting and tests, followed by a build process that will throw out a development version of the app. Pushing to `master` will result in the same outcome, but with a production version of the app. If a build fails or is successful, a notification will trigger in the Slack room [#eng-notifications][7] and will include a link to a Bitrise install page, which is the easiest way to pull down an Android build. iOS builds are automatically pushed to TestFlight.
 
-The [#eng-apps][7] channel is dedicated to all mobile app development discussion, whilst [#eng-apis][8] is dedicated to all discussion around our APIs.
+### Communication & Standups
+Daily Standups take place in [#eng-collab][8] (a Slack channel dedicated to external collaborators) at 0900 GMT, Monday through Friday. 
+
+The [#eng-apps][9] channel is dedicated to all mobile app development discussion, whilst [#eng-apis][10] is dedicated to all discussion around our APIs.
 
 [1]: https://clubhouse.io
 [2]: https://app.clubhouse.io/nomod/stories/space/17/engineering
 [3]: https://app.clubhouse.io/nomod/project/896/mobile
 [4]: https://github.com/nomoding/nomod-app
 [5]: https://github.com/nomoding/nomod-stripe-app
-[6]: https://nomoding.slack.com/archives/CMSB1TJG2
-[7]: https://nomoding.slack.com/archives/CSX4J2CSH
-[8]: https://nomoding.slack.com/archives/CSWL98X0C
+[6]: https://bitrise.io
+[7]: https://nomoding.slack.com/archives/C011C3ZT8BZ
+[8]: https://nomoding.slack.com/archives/CMSB1TJG2
+[9]: https://nomoding.slack.com/archives/CSX4J2CSH
+[10]: https://nomoding.slack.com/archives/CSWL98X0C
 
