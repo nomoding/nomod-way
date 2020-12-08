@@ -9,7 +9,7 @@ order: 2
 We have two standalone APIs individually targetting our two apps:
 
 1. The Nomod API is built in Python using the Django framework
-2. Thhe Nomod for Stripe API is built in custom Python
+2. The Nomod for Stripe API is built in custom Python
 
 The Nomod API is our primary focus and therefore all major new functionality is being built into it. The Nomod for Stripe API will continue to be maintained, but it is expected that features will be added less frequently.
 
@@ -29,7 +29,7 @@ We use Github to manage all of our code and to host our code repositories. The r
 We use Kubernetes together with Google Cloud Build to automatically build and push new version of our API to GCP [insert more details here].
 
 ### Documentation
-Our API documentation is available in the [Nomod Docs repo][6] and is built with [Slant][7], an [Eleventy][8] based fork of [Slate][9] and is hosted on [Netlify][10]
+Our API documentation is available in the [Nomod Docs repo][6] and is built with [Slant][7], an [Eleventy][8] based fork of [Slate][9] and is hosted on [Netlify][10].
 
 ### Communication & Standups
 Daily Standups take place in [#eng-collab][11] (a Slack channel dedicated to external collaborators) at 0900 GMT, Monday through Friday. 
