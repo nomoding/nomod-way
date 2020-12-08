@@ -6,7 +6,7 @@ articleSubCategory: Process
 order: 1
 ---
 ### Background
-Nomod's Apps are built in React Native. We chave two standalone apps targetting two different audiences.
+Nomod's Apps are built in React Native. We have two standalone apps targetting two different audiences.
 
 1. Nomod for Stripe. This app is currently available as "Nomod" in both the App and Play Stores. In the near future it will be rebranded to Nomod for Stripe. The app requires a user to create or signup to a Stripe account and is targetted at users who have or are willing to have an active payments relationship with Stripe.
 
@@ -21,9 +21,9 @@ We use the following tools for for our mobile engineering workflow:
 
 All of our UI together with explanatory flows are located in Figma. Figma is organised into Projects, with each project containing a specific large set of features of our product. All mobile projects have an "App - " designation in their name followed by the feature, for example "App - Dashboard" is where you'll find UI for our Dashboard, or "App - Settings" is where you'll find UI for our Settings pane.
 
-We use [Clubhouse][1] to manage our user Stories, Epics, Milestones, and related workflows. We have a single [Engineering workflow][2] broken down by both project and stage. The relevant project for mobile is appropriately named [Mobile][3] and is available as a standalone view within Clubhouse for additional visbility.
+We use [Clubhouse][1] to manage our user Stories, Epics, Milestones, and related workflows. We have a single [Engineering workflow][2] broken down by both project and stage. The relevant project for mobile is appropriately named [Mobile][3] and is available as a standalone view within Clubhouse for additional visibility.
 
-We use Github to manage all of our code and to hose our code repositories. The relvant repositories for Mobile are:
+We use Github to manage all of our code and to host our code repositories. The relevant repositories for Mobile are:
 
 - [Nomod App][4]
 - [Nomod for Stripe][5]
