@@ -248,7 +248,7 @@
   line-height: 28px;
 }
 
-// Seacrh Form
+// Search Form
 .search-form {
   filter: drop-shadow(0 10px 40px #0000001a);
 
@@ -350,6 +350,10 @@
     letter-spacing: -0.09px;
     line-height: 28px;
     margin-bottom: 20px;
+  }
+
+  li {
+    color: $gray-text;
   }
 }
 
